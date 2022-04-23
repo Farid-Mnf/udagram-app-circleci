@@ -12,6 +12,10 @@ jobs:
       - node/install
       - checkout
       - run:
+          name: check node version
+          command: |
+            node -v
+      - run:
           name: frontend_install
           command: |
             npm run frontend:install
