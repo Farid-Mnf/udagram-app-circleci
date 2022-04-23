@@ -43,7 +43,7 @@ const model_index_1 = require("./controllers/v0/model.index");
     app.use("/api/v0/", index_router_1.IndexRouter);
     // Root URI call
     app.get("/", (req, res) => __awaiter(this, void 0, void 0, function* () {
-        res.send("/api/v5/");
+        res.send("/api/v6/");
     }));
     // Start the Server
     app.listen(port, () => {
