@@ -37,14 +37,14 @@ jobs:
           name: backend_install
           command: |
             npm run backend:install
-      # - run:
-      #     name: deploy backend
-      #     command: |
-      #       npm run backend:deploy
-      # - run:
-      #     name: deploy frontend
-      #     command: |
-      #       npm run frontend:deploy
+      - run:
+          name: deploy backend
+          command: |
+            npm run backend:deploy
+      - run:
+          name: deploy frontend
+          command: |
+            npm run frontend:deploy
       - run:
           name: frontend test
           command: |
