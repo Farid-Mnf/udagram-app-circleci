@@ -6,8 +6,9 @@ orbs:
   browser-tools: circleci/browser-tools@1.2.3
 jobs:
   build:
+    working_directory: ~/udagram
     docker:
-      - image: "cimg/base:stable"
+      - image: cimg/node:16.13.1-browsers
     executor: aws-cli/default
     steps:
       - browser-tools/install-chrome
@@ -17,13 +18,17 @@ jobs:
             google-chrome --version
             chromedriver --version
           name: Check install
+      - restore_cache:
+          key: udagram-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run: npm install
+      - save_cache:
+          key: udagram-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - "node_modules"
       - aws-cli/setup
       - eb/setup      
-      - node/install:
-           node-version: '16.14'
       - run: node --version
       - checkout
-
       - run:
           name: frontend_install
           command: |
@@ -32,14 +37,14 @@ jobs:
           name: backend_install
           command: |
             npm run backend:install
-      - run:
-          name: deploy backend
-          command: |
-            npm run backend:deploy
-      - run:
-          name: deploy frontend
-          command: |
-            npm run frontend:deploy
+      # - run:
+      #     name: deploy backend
+      #     command: |
+      #       npm run backend:deploy
+      # - run:
+      #     name: deploy frontend
+      #     command: |
+      #       npm run frontend:deploy
       - run:
           name: frontend test
           command: |
