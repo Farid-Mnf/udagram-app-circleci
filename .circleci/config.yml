@@ -18,17 +18,17 @@ jobs:
             google-chrome --version
             chromedriver --version
           name: Check install
+      - aws-cli/setup
+      - eb/setup      
+      - run: node --version
+      - checkout
       - restore_cache:
           key: udagram-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm install
       - save_cache:
           key: udagram-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
-            - "node_modules"
-      - aws-cli/setup
-      - eb/setup      
-      - run: node --version
-      - checkout
+            - "node_modules"      
       - run:
           name: frontend_install
           command: |
