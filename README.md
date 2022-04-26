@@ -19,7 +19,7 @@ http://angular-frontend-bucket.s3-website-us-east-1.amazonaws.com/
 6. create S3 bucket to host Frontend Angular application and enable website hosting and public access
 
 ### architecutre diagram
-![architecutre diagram](https://github.com/Farid-Mnf/udagram-app-circleci/blob/main/app-architecture-diagram.png?raw=true)
+![architecutre diagram](https://github.com/Farid-Mnf/udagram-app-circleci/blob/main/screenshots/app-architecture-diagram.png?raw=true)
 
 
 This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
