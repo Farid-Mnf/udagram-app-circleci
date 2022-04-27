@@ -1,3 +1,3 @@
 1. infrastructure documentation: [infrastructure](https://github.com/Farid-Mnf/udagram-app-circleci/tree/main/documentation/Infrastructure)
 2. dependencies documentation: [dependencies](https://github.com/Farid-Mnf/udagram-app-circleci/tree/main/documentation/dependencies)
-3. pipeline process documentation: [pipeline](https://github.com/Farid-Mnf/udagram-app-circleci/tree/main/documentation/Infrastructure)
+3. pipeline process documentation: [pipeline](https://github.com/Farid-Mnf/udagram-app-circleci/tree/main/documentation/pipeline)
