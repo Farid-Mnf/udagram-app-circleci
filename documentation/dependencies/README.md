@@ -5,6 +5,7 @@
 - Typescript to enforce type checking accross the whole project.
 - Eslint and Mocha for testing and syntax correction.
 - Sequilize and Postgres for database connection.
+- Environment variables used by the app are found here: [Env variables](https://github.com/Farid-Mnf/udagram-app-circleci/blob/main/screenshots/elastic-beanstalk-env.png)
 
 ![dependencies](https://github.com/Farid-Mnf/udagram-app-circleci/blob/main/screenshots/dependencies-diagram.png)
 

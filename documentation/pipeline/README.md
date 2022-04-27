@@ -4,6 +4,7 @@
  - Deployment, integration, automation and testing is done with CircleCI Platform
  - Deployment Script config.yml file can be found at: [config.yml](https://github.com/Farid-Mnf/udagram-app-circleci/blob/main/.circleci/config.yml)
  - CircleCI triggers github commits automatically then runs jobs found in config.yml file.
+ - CircleCI environment secrets: [CircleCI Secrets](https://github.com/Farid-Mnf/udagram-app-circleci/blob/main/screenshots/circleCI-env-secrets.png)
 ## Pipeline process description
 1. Commit and push code changes from local computer to github.
 2. CircleCI runs another pipeline process for that change automatically.
