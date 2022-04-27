@@ -18,6 +18,12 @@ jobs:
       - browser-tools/install-chrome # install chrome for testing Frontend
       - browser-tools/install-chromedriver
       - run:
+          name: ls
+          command: |
+            ls 
+            pwd
+            
+      - run:
           command: |
             google-chrome --version
             chromedriver --version
@@ -41,12 +47,7 @@ jobs:
           name: backend_install
           command: |
             npm run backend:install
-      - run:
-          name: ls
-          command: |
-            ls 
-            pwd
-            
+      
       # - run: # run deploy.sh script in each app to deploy app to aws cloud
       #     name: deploy backend
       #     command: |
