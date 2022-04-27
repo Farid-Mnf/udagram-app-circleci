@@ -4,13 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "pwd && ls && node .",
+    "start": "node .",
     "tsc": "tsc",
     "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
     "prod": "tsc && node ./www/server.js",
     "clean": "mv www/.elasticbeanstalk/config.yml config.yml &&  rm -rf www/ || true && mkdir www && mkdir www/.elasticbeanstalk && mv config.yml www/.elasticbeanstalk/config.yml",
     "build": "npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jasmine",
     "deploy": "chmod +x bin/deploy.sh && ./bin/deploy.sh"
   },
   "keywords": [],
