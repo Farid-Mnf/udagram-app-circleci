@@ -24,7 +24,6 @@ jobs:
           name: Check install
       - aws-cli/setup # setup aws cli to use aws s3 command
       - eb/setup      # setup aws elastic beanstalk to use 'eb' command 
-      - run: node --version
       - checkout # get code from VCS
       - run:
           name: setup eb env
