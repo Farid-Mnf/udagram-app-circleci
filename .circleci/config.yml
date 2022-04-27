@@ -29,7 +29,7 @@ jobs:
           name: setup eb env
           command: |
             cd udagram-api/www
-            eb setenv PORT=$POST
+            eb setenv PORT=$PORT
             eb setenv POSTGRES_DB=$POSTGRES_DB
             eb setenv POSTGRES_HOST=$POSTGRES_HOST
             eb setenv POSTGRES_USERNAME=$POSTGRES_USERNAME
@@ -50,7 +50,6 @@ jobs:
           name: backend_install
           command: |
             npm run backend:install
-      
       - run: # run deploy.sh script in each app to deploy app to aws cloud
           name: deploy backend
           command: |
