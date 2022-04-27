@@ -1,3 +1,10 @@
 npm run build
 cd www
+eb setenv AWS_PROFILE=$AWS_PROFILE
+eb setenv PORT=$POST
+eb setenv POSTGRES_DB=$POSTGRES_DB
+eb setenv POSTGRES_HOST=$POSTGRES_HOST
+eb setenv POSTGRES_USERNAME=$POSTGRES_USERNAME
+eb setenv POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+eb setenv URL=$URL
 eb deploy
