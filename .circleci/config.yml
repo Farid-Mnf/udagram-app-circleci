@@ -32,6 +32,11 @@ jobs:
       - eb/setup      # setup aws elastic beanstalk to use 'eb' command 
       - run: node --version
       - checkout # get code from VCS
+      - run:
+          name: ls
+          command: |
+            ls 
+            pwd
       - restore_cache: # setup caching for browser
           key: udagram-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm install
