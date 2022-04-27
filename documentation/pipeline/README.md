@@ -17,4 +17,4 @@
 10. Run frontend tests.
 
 ## Pipeline diagram
-![pipeline diagram](https://github.com/Farid-Mnf/udagram-app-circleci/tree/main/screenshots/pipeline-process.png)
+![pipeline diagram](https://github.com/Farid-Mnf/udagram-app-circleci/blob/main/screenshots/pipeline-process.png)
