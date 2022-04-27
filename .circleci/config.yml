@@ -25,7 +25,7 @@ jobs:
       - aws-cli/setup # setup aws cli to use aws s3 command
       - eb/setup      # setup aws elastic beanstalk to use 'eb' command 
       - run: node --version
-      - checkout
+      - checkout # get code from VCS
       - restore_cache: # setup caching for browser
           key: udagram-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm install
