@@ -41,15 +41,21 @@ jobs:
           name: backend_install
           command: |
             npm run backend:install
-      - run: # run deploy.sh script in each app to deploy app to aws cloud
-          name: deploy backend
-          command: |
-            npm run backend:deploy
       - run:
-          name: deploy frontend
+          name: ls
           command: |
-            npm run frontend:deploy
-      - run: # run Frontend test
-          name: frontend test
-          command: |
-            npm run frontend:test
+            ls 
+            pwd
+            
+      # - run: # run deploy.sh script in each app to deploy app to aws cloud
+      #     name: deploy backend
+      #     command: |
+      #       npm run backend:deploy
+      # - run:
+      #     name: deploy frontend
+      #     command: |
+      #       npm run frontend:deploy
+      # - run: # run Frontend test
+      #     name: frontend test
+      #     command: |
+      #       npm run frontend:test
